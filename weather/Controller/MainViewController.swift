@@ -257,6 +257,9 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         //set image of weather at that day
         let urlImg = URL(string: "https://openweathermap.org/img/wn/\(item.img)@2x.png")
         cell.weatherImg.kf.setImage(with: urlImg)
+        //some improvements
+        cell.shadow.layer.masksToBounds = false
+        cell.main.layer.masksToBounds = true
         return cell
     }
     

@@ -24,6 +24,7 @@
 		89B26B0A28D667CE000E28B6 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B26B0928D667CE000E28B6 /* CityTableViewCell.swift */; };
 		89B26B0D28D75ED3000E28B6 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B26B0C28D75ED3000E28B6 /* Networking.swift */; };
 		89B26B1028D807EA000E28B6 /* SwinjectStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B26B0F28D807EA000E28B6 /* SwinjectStoryBoard.swift */; };
+		89B26B1328D822C0000E28B6 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B26B1228D822C0000E28B6 /* Shadow.swift */; };
 		89E7010328D4F5FD00392530 /* WeatherAnswerByGPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E7010228D4F5FD00392530 /* WeatherAnswerByGPS.swift */; };
 		89E7010528D4FE9400392530 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E7010428D4FE9400392530 /* City.swift */; };
 		D8EB17C0E5BDA02541A044E8 /* Pods_weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382068C7A27D750EED8DE74F /* Pods_weather.framework */; };
@@ -52,6 +53,7 @@
 		89B26B0928D667CE000E28B6 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		89B26B0C28D75ED3000E28B6 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		89B26B0F28D807EA000E28B6 /* SwinjectStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryBoard.swift; sourceTree = "<group>"; };
+		89B26B1228D822C0000E28B6 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		89E7010228D4F5FD00392530 /* WeatherAnswerByGPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAnswerByGPS.swift; sourceTree = "<group>"; };
 		89E7010428D4FE9400392530 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 		89876A9D28D3B7A1006C4018 /* weather */ = {
 			isa = PBXGroup;
 			children = (
+				89B26B1128D81C98000E28B6 /* Cells */,
 				89B26B0E28D807C9000E28B6 /* Extension */,
 				89B26B0B28D75E72000E28B6 /* Dependencies */,
 				89B26B0828D662A0000E28B6 /* Controller */,
@@ -109,11 +112,6 @@
 				89876AA728D3B7A3006C4018 /* Assets.xcassets */,
 				89876AA928D3B7A3006C4018 /* LaunchScreen.storyboard */,
 				89876AAC28D3B7A3006C4018 /* Info.plist */,
-				89876AB428D3CCC7006C4018 /* WCollectionViewCell.swift */,
-				89876AB528D3CCC7006C4018 /* WCollectionViewCell.xib */,
-				89876AB828D3D0C0006C4018 /* WTableViewCell.swift */,
-				89876AB928D3D0C0006C4018 /* WTableViewCell.xib */,
-				89B26B0928D667CE000E28B6 /* CityTableViewCell.swift */,
 			);
 			path = weather;
 			sourceTree = "<group>";
@@ -150,6 +148,19 @@
 				89B26B0F28D807EA000E28B6 /* SwinjectStoryBoard.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		89B26B1128D81C98000E28B6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				89876AB428D3CCC7006C4018 /* WCollectionViewCell.swift */,
+				89876AB528D3CCC7006C4018 /* WCollectionViewCell.xib */,
+				89876AB828D3D0C0006C4018 /* WTableViewCell.swift */,
+				89876AB928D3D0C0006C4018 /* WTableViewCell.xib */,
+				89B26B0928D667CE000E28B6 /* CityTableViewCell.swift */,
+				89B26B1228D822C0000E28B6 /* Shadow.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		89E7010128D4F5C200392530 /* Model */ = {
@@ -293,6 +304,7 @@
 				89876AA128D3B7A1006C4018 /* SceneDelegate.swift in Sources */,
 				89B26B0D28D75ED3000E28B6 /* Networking.swift in Sources */,
 				89B26B0228D64C36000E28B6 /* MapViewController.swift in Sources */,
+				89B26B1328D822C0000E28B6 /* Shadow.swift in Sources */,
 				89876ABA28D3D0C0006C4018 /* WTableViewCell.swift in Sources */,
 				89B26B0A28D667CE000E28B6 /* CityTableViewCell.swift in Sources */,
 				89876AB328D3B821006C4018 /* MainViewController.swift in Sources */,

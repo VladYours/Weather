@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate  {
+class SearchViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate  {
     
     
 
@@ -22,10 +22,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //delegate
         cTable.delegate = self
         cTable.dataSource = self
         search.delegate = self
-        
+        //get city from resource file
         if let path = Bundle.main.path(forResource: "city", ofType: "json") {
             do {
                   let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
@@ -36,15 +37,18 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                   print("Error parse source")
               }
         }
+        //set gesture for back
         let tapBack = UITapGestureRecognizer(target: self, action: #selector(handleTapBack))
         tapBack.delegate = self
         back.addGestureRecognizer(tapBack)
+        //set gesture for search
         let tapLoupe = UITapGestureRecognizer(target: self, action: #selector(handleTapLoupe))
         tapLoupe.delegate = self
         loupe.addGestureRecognizer(tapLoupe)
     }
     
     
+    //tap on back
     @objc func handleTapBack(gestureRecognizer: UITapGestureRecognizer){
         //go to main view
         print("tap Back")
@@ -54,6 +58,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
+    //tap on search
     @objc func handleTapLoupe(){
         print("tap Loupe")
         makeSearch()
@@ -74,9 +79,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             cityList = citySource.filter({$0.name.contains(searchText)})
             cTable.reloadData()
         }
-        
     }
+}
     
+ 
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cityList.count
@@ -91,6 +98,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
+    //tap on row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = cityList[indexPath.row]
         //go to main view

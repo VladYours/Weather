@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayWeather" rowHeight="60" id="KGk-i7-Jjw" customClass="WTableViewCell" customModule="weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RM-7z-zsT" userLabel="Shadow" customClass="Shadow" customModule="weather" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NU-GA-qBu" userLabel="Main">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПТ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeW-pX-xW3" userLabel="dayOfWeek">
+                                <rect key="frame" x="20" y="9" width="29" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27/19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O2-TJ-uym" userLabel="temp">
+                                <rect key="frame" x="133" y="9" width="54" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.sun.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xfk-WM-VI0" userLabel="weatherImg">
+                                <rect key="frame" x="260" y="1" width="41" height="39"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="e1g-oo-WTf"/>
+                                    <constraint firstAttribute="width" constant="40" id="xDF-QP-98n"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2O2-TJ-uym" firstAttribute="centerY" secondItem="6NU-GA-qBu" secondAttribute="centerY" id="2ib-Fm-xRb"/>
+                            <constraint firstItem="Xfk-WM-VI0" firstAttribute="centerY" secondItem="6NU-GA-qBu" secondAttribute="centerY" id="J2b-gM-3sA"/>
+                            <constraint firstAttribute="trailing" secondItem="Xfk-WM-VI0" secondAttribute="trailing" constant="20" id="MpI-NL-4Zc"/>
+                            <constraint firstItem="IeW-pX-xW3" firstAttribute="leading" secondItem="6NU-GA-qBu" secondAttribute="leading" constant="20" id="gxx-v4-c9I"/>
+                            <constraint firstItem="IeW-pX-xW3" firstAttribute="centerY" secondItem="6NU-GA-qBu" secondAttribute="centerY" id="n3X-jK-9Ze"/>
+                            <constraint firstItem="2O2-TJ-uym" firstAttribute="centerX" secondItem="6NU-GA-qBu" secondAttribute="centerX" id="qqF-vg-rEp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0RM-7z-zsT" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9lr-9X-Rov"/>
+                    <constraint firstItem="0RM-7z-zsT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ohn-Iq-uTX"/>
+                    <constraint firstItem="0RM-7z-zsT" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="R0s-jd-1GB"/>
+                    <constraint firstItem="0RM-7z-zsT" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="Syh-yZ-TzS"/>
+                    <constraint firstItem="6NU-GA-qBu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wk6-fS-MqQ"/>
+                    <constraint firstItem="6NU-GA-qBu" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="lb6-1O-7XB"/>
+                    <constraint firstItem="6NU-GA-qBu" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="zHV-de-hiL"/>
+                    <constraint firstItem="6NU-GA-qBu" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zxK-Lf-xvS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dayOfWeek" destination="IeW-pX-xW3" id="nf9-9a-Ke2"/>
+                <outlet property="main" destination="6NU-GA-qBu" id="kcP-gQ-2C2"/>
+                <outlet property="shadow" destination="0RM-7z-zsT" id="N1R-WP-R8e"/>
+                <outlet property="temp" destination="2O2-TJ-uym" id="HLI-Az-F7b"/>
+                <outlet property="weatherImg" destination="Xfk-WM-VI0" id="8XC-Ot-00I"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="113.83928571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cloud.sun.fill" catalog="system" width="128" height="95"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

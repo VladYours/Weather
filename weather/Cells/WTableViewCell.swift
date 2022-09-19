@@ -9,6 +9,8 @@ import UIKit
 
 class WTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var main: UIView!
+    @IBOutlet weak var shadow: Shadow!
     @IBOutlet weak var dayOfWeek: UILabel!
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var weatherImg: UIImageView!
@@ -22,8 +24,8 @@ class WTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        shadow.isHidden = false
     }
     
 }
