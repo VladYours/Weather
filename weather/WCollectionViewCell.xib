@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hourWeather" id="gTV-IL-0wX" customClass="WCollectionViewCell" customModule="weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="70" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="70" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHr-X3-bib" userLabel="hour">
+                        <rect key="frame" x="20" y="25" width="18" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxu-18-cy3" userLabel="min">
+                        <rect key="frame" x="38" y="25" width="12" height="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.sun.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JqE-Ea-P0z" userLabel="wImg">
+                        <rect key="frame" x="0.0" y="55" width="71" height="49"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Rpj-Tb-IcL"/>
+                            <constraint firstAttribute="height" constant="50" id="ad1-uZ-l0v"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELN-Av-aQL" userLabel="temp">
+                        <rect key="frame" x="24" y="106" width="22.5" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="JqE-Ea-P0z" firstAttribute="top" secondItem="VHr-X3-bib" secondAttribute="bottom" constant="10" id="37G-py-hFn"/>
+                <constraint firstItem="ELN-Av-aQL" firstAttribute="centerX" secondItem="JqE-Ea-P0z" secondAttribute="centerX" id="7jl-b4-QGA"/>
+                <constraint firstItem="pxu-18-cy3" firstAttribute="top" secondItem="VHr-X3-bib" secondAttribute="top" id="PwI-ha-fbn"/>
+                <constraint firstItem="ELN-Av-aQL" firstAttribute="top" secondItem="JqE-Ea-P0z" secondAttribute="bottom" id="ST5-jg-Xz9"/>
+                <constraint firstItem="VHr-X3-bib" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="UQb-mv-XES"/>
+                <constraint firstItem="VHr-X3-bib" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="aNb-9o-NVk"/>
+                <constraint firstItem="pxu-18-cy3" firstAttribute="leading" secondItem="VHr-X3-bib" secondAttribute="trailing" id="d2A-Wg-lZt"/>
+                <constraint firstItem="JqE-Ea-P0z" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="xDx-3Y-LEO"/>
+            </constraints>
+            <connections>
+                <outlet property="hour" destination="VHr-X3-bib" id="tqe-e8-E1Y"/>
+                <outlet property="min" destination="pxu-18-cy3" id="q0c-Eq-sNX"/>
+                <outlet property="temp" destination="ELN-Av-aQL" id="p7t-GV-Ha4"/>
+                <outlet property="wImg" destination="JqE-Ea-P0z" id="Wg9-x2-BlV"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cloud.sun.fill" catalog="system" width="128" height="95"/>
+    </resources>
+</document>

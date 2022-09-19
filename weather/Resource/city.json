@@ -1,0 +1,82 @@
+[
+{
+        "id": 8224454,
+        "name": "Novyi Svit",
+        "state": "",
+        "country": "UA",
+        "coord": {
+            "lon": 34.91301,
+            "lat": 44.82988
+        }
+    },
+{
+        "id": 8129116,
+        "name": "Hora",
+        "state": "",
+        "country": "UA",
+        "coord": {
+            "lon": 30.859909,
+            "lat": 50.371201
+        }
+    },
+{
+        "id": 8037857,
+        "name": "Prohres",
+        "state": "",
+        "country": "UA",
+        "coord": {
+            "lon": 34.036709,
+            "lat": 52.158852
+        }
+    },
+{
+        "id": 7525990,
+        "name": "Yuzhnoukrains'k",
+        "state": "",
+        "country": "UA",
+        "coord": {
+            "lon": 31.182631,
+            "lat": 47.817768
+        }
+    },
+{
+        "id": 7522123,
+        "name": "Scholkine",
+        "state": "",
+        "country": "UA",
+        "coord": {
+            "lon": 35.824699,
+            "lat": 45.427608
+        }
+    },
+{
+        "id": 7303923,
+        "name": "Stepove",
+        "state": "",
+        "country": "UA",
+        "coord": {
+            "lon": 30.079189,
+            "lat": 46.70385
+        }
+    },
+{
+        "id": 7280677,
+        "name": "Denyshi",
+        "state": "",
+        "country": "UA",
+        "coord": {
+            "lon": 28.40395,
+            "lat": 50.214149
+        }
+    },
+{
+        "id": 7048363,
+        "name": "Druzhba",
+        "state": "",
+        "country": "UA",
+        "coord": {
+            "lon": 34.994579,
+            "lat": 46.54496
+        }
+    }
+]
