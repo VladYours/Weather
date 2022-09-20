@@ -117,6 +117,7 @@ class MainViewController: UIViewController {
         //set collection with first day hours info
         dayForTop = firstDayHours.hours
         hoursInfoCollection.reloadData()
+        hoursInfoCollection.setContentOffset(.zero, animated: false)
         //set top of main screen with info about first received hour of first day
         setupTop(info: firstItem)
         
@@ -270,6 +271,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         //renew Collection
         dayForTop = dayInfo.hours
         hoursInfoCollection.reloadData()
+        hoursInfoCollection.setContentOffset(.zero, animated: false)
         //set top of main view
         guard let firstHourInDay = dayForTop.first else {
             return

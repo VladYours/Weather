@@ -24,8 +24,13 @@ class WTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        //show or hide shadows in selected cell
+        if selected {
+            shadow.isHidden = false
+        } else {
+            shadow.isHidden = true
+        }
         
-        shadow.isHidden = false
     }
     
 }
