@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (5.5.0)
+  - Kingfisher (7.3.2)
+  - Swinject (2.7.1)
+  - SwinjectAutoregistration (2.8.1):
+    - Swinject (= 2.7.1)
+  - SwinjectStoryboard (2.2.2):
+    - Swinject (~> 2.7.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - Swinject
+  - SwinjectAutoregistration
+  - SwinjectStoryboard
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - Swinject
+    - SwinjectAutoregistration
+    - SwinjectStoryboard
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Kingfisher: 0086ad83719761ba9b2cdaf6ef4d5b4878cbae23
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectAutoregistration: e83e362da3ca9c64a68290e89efbc40e378dff12
+  SwinjectStoryboard: 240ce371396da09a4c43c72ee5c148108500e184
+
+PODFILE CHECKSUM: 38e449a8c9ae0ddf3df789d7cba302b0ebab322b
+
+COCOAPODS: 1.11.3
